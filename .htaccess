@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^senor-crema/?$ /senorcrema/ [R=301,L]
+RewriteRule ^sr-?crema/?$ /senorcrema/ [R=301,L]
+RewriteRule ^la-otra-orilla-del-sar/?(.*)$ /senorcrema/la-otra-orilla-del-sar/$1 [R=301,L]

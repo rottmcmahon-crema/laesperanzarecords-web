@@ -1,0 +1,118 @@
+:root{
+  /* Un solo mundo visual: negro de imprenta y crema del logo. La carta de tarot es la pieza de la casa;
+     cada artista es una carta numerada. Layout: columna ancha, texto a la izquierda, carta a la derecha. */
+  color-scheme: dark;
+  --negro:#000000;
+  --tinta:#0e0f12;
+  --crema:#f1e1c0;
+  --crema-apagado:#b9ad93;
+  --marino:#1f2b45;
+  --filete:rgba(241,225,192,.28);
+  --rojo:#b5392b; --verde:#5d6b3a; --azul:#2f4f86; --amarillo:#d6a62a;
+  --display:"Cinzel","Trajan Pro","Times New Roman",serif;
+  --cuerpo:"Archivo","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--negro);color:var(--crema);font-family:var(--cuerpo);font-size:17px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--crema);outline-offset:3px}
+.ancho{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:.06em;text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--display);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--crema-apagado)}
+
+/* cabecera */
+.cab{border-bottom:1px solid var(--filete)}
+.cab .ancho{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);letter-spacing:.2em;font-size:.9rem}
+.marca img{width:44px;height:44px;object-fit:contain;mix-blend-mode:lighten}
+.nav{display:flex;gap:22px;flex-wrap:wrap;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase}
+.nav a{text-decoration:none;color:var(--crema-apagado);padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--crema);border-bottom-color:var(--crema)}
+
+/* portada */
+.portada .ancho{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:64px;padding-bottom:72px}
+.portada h1{font-size:clamp(2.3rem,5.6vw,4.2rem);line-height:1.08;margin:18px 0 22px}
+.portada p{max-width:34em;color:var(--crema-apagado);margin:0 0 30px}
+.carta-casa{justify-self:center;max-width:340px;transform:rotate(2.5deg);box-shadow:0 30px 60px rgba(0,0,0,.8),0 0 0 1px var(--filete);border-radius:14px;overflow:hidden}
+.botones{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-family:var(--display);font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;padding:14px 22px;border:1px solid var(--crema)}
+.btn.lleno{background:var(--crema);color:var(--negro)}
+.btn:hover{background:var(--crema);color:var(--negro)}
+.btn.lleno:hover{background:transparent;color:var(--crema)}
+
+/* secciones */
+section.bloque{border-top:1px solid var(--filete);padding:64px 0}
+.bloque h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:10px 0 34px}
+
+/* cartas de artista */
+.baraja{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:26px}
+.naipe{position:relative;aspect-ratio:2/3;border:1px solid var(--crema);border-radius:12px;padding:10px;text-decoration:none;background:var(--tinta);display:flex}
+.naipe .dentro{flex:1;border:1px solid var(--filete);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;padding:18px 14px;
+  background:radial-gradient(120% 80% at 50% 40%,var(--marino) 0%,var(--tinta) 70%)}
+.naipe .num{font-family:var(--display);letter-spacing:.3em;font-size:.95rem}
+.naipe .nombre{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:.1em;line-height:1.2}
+.naipe .pie{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--crema-apagado)}
+.naipe .astro{font-size:2.4rem;line-height:1;color:var(--crema)}
+a.naipe:hover{transform:translateY(-6px);transition:transform .2s}
+.naipe.velado{border-style:dashed;border-color:var(--filete)}
+.naipe.velado .nombre,.naipe.velado .num,.naipe.velado .astro{color:var(--crema-apagado)}
+
+/* página de artista */
+.ficha .ancho{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;padding-top:56px;padding-bottom:64px;align-items:start}
+.ficha h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:12px 0 20px}
+.ficha p{max-width:36em;margin:0 0 16px}
+.ficha .dato{color:var(--crema-apagado)}
+.pistas{list-style:none;margin:0;padding:0;border-top:1px solid var(--filete)}
+.pistas li{display:grid;grid-template-columns:54px 1fr auto;gap:18px;align-items:center;padding:14px 0;border-bottom:1px solid var(--filete)}
+.tapa{width:54px;height:54px;border-radius:4px;display:grid;place-items:center;font-family:var(--display);font-size:.8rem;color:var(--negro)}
+.pistas .titulo{font-family:var(--display);font-weight:700;letter-spacing:.08em;font-size:1.1rem}
+.pistas .estado{font-size:.8rem;color:var(--crema-apagado)}
+.pistas a{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--crema);padding-bottom:2px;white-space:nowrap}
+.pistas .pronto{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amarillo);white-space:nowrap}
+
+/* pie */
+footer{border-top:1px solid var(--filete);padding:40px 0 56px;color:var(--crema-apagado);font-size:.9rem}
+footer .ancho{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--crema)}
+
+@media (max-width:760px){
+  .portada .ancho,.ficha .ancho{grid-template-columns:1fr;gap:36px;padding-top:40px}
+  .carta-casa{max-width:260px}
+  .pistas li{grid-template-columns:44px 1fr;row-gap:6px}
+  .pistas li > :last-child{grid-column:2}
+  .tapa{width:44px;height:44px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}a.naipe:hover{transform:none}}
+
+/* ===== La otra orilla del Sar: flores sobre rojo ===== */
+.sar{--acento:#b5392b}
+.sar .flor{background:#7d2a20 url(/img/flores.jpg) center 30%/cover no-repeat;position:relative}
+.sar .flor::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.55) 55%,#000 100%)}
+.sar .flor .ancho{position:relative;z-index:1;padding-top:120px;padding-bottom:44px}
+.sar .flor h1{font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.08;margin:12px 0 10px;text-shadow:0 2px 18px rgba(0,0,0,.7)}
+.sar .flor .eyebrow{color:var(--crema)}
+.sar .flor p{max-width:36em;margin:0;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.migas{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--crema-apagado);padding:18px 0 0}
+.migas a{color:var(--crema-apagado);text-decoration:none;border-bottom:1px solid var(--filete)}
+.migas a:hover{color:var(--crema)}
+.dos{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;padding-top:48px;padding-bottom:64px;align-items:start}
+.dos p{max-width:36em;margin:0 0 16px}
+.caratula{border-radius:6px;box-shadow:0 24px 50px rgba(0,0,0,.8),0 0 0 1px var(--filete);width:100%;aspect-ratio:1/1;object-fit:cover}
+.caratula.falsa{display:grid;place-items:center;background:var(--acento);color:var(--negro);font-family:var(--display);font-weight:700;letter-spacing:.1em;font-size:1.6rem;text-align:center;padding:20px}
+.datos{display:grid;grid-template-columns:auto 1fr;gap:8px 22px;margin:22px 0 28px;font-size:.95rem}
+.datos dt{color:var(--crema-apagado);letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;padding-top:3px}
+.datos dd{margin:0}
+.filete-acento{height:4px;background:var(--acento)}
+.poemas{width:100%;border-collapse:collapse;margin-top:14px;font-size:.95rem}
+.poemas th{text-align:left;font-family:var(--display);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--crema-apagado);font-weight:500;padding:10px 14px 10px 0;border-bottom:1px solid var(--filete)}
+.poemas td{padding:12px 14px 12px 0;border-bottom:1px solid var(--filete);vertical-align:top}
+.retrato{width:100%;border-radius:6px;box-shadow:0 24px 50px rgba(0,0,0,.8),0 0 0 1px var(--filete)}
+.video{position:relative;aspect-ratio:16/9;margin:0 0 26px;border:1px solid var(--filete);background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.pistas .titulo a{font:inherit;letter-spacing:inherit;text-transform:none;border:0;padding:0}
+.pistas .titulo a:hover{border-bottom:1px solid var(--crema)}
+.vecinas{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--filete);padding-top:22px;margin-top:36px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}
+.vecinas a{text-decoration:none;border-bottom:1px solid var(--crema);padding-bottom:2px}
+@media (max-width:760px){.dos{grid-template-columns:1fr;gap:32px;padding-top:32px}.sar .flor .ancho{padding-top:72px}}

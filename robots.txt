@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laesperanzarecords.com/sitemap.xml
