@@ -1,4 +1,5 @@
 ErrorDocument 404 /404.html
+RedirectMatch 404 /\.git
 RewriteEngine On
 RewriteRule ^senor-crema/?$ /senorcrema/ [R=301,L]
 RewriteRule ^sr-?crema/?$ /senorcrema/ [R=301,L]
