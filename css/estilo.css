@@ -105,6 +105,11 @@ footer a{color:var(--crema)}
 .datos dt{color:var(--crema-apagado);letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;padding-top:3px}
 .datos dd{margin:0}
 .filete-acento{height:4px;background:var(--acento)}
+.letra{border-top:1px solid var(--filete);margin-top:36px;padding-top:28px}
+.letra h2{font-size:1.25rem;margin:10px 0 22px}
+.letra .estrofa{margin:0 0 20px;line-height:1.75;max-width:30em}
+.letra .estrofa[data-parte="Estribillo"],.letra .estrofa[data-parte="Estribillo final"],.letra .estrofa[data-parte="Repetición"]{padding-left:16px;border-left:3px solid var(--acento)}
+.letra .firma{font-size:.9rem;margin-top:26px}
 .poemas{width:100%;border-collapse:collapse;margin-top:14px;font-size:.95rem}
 .poemas th{text-align:left;font-family:var(--display);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--crema-apagado);font-weight:500;padding:10px 14px 10px 0;border-bottom:1px solid var(--filete)}
 .poemas td{padding:12px 14px 12px 0;border-bottom:1px solid var(--filete);vertical-align:top}
