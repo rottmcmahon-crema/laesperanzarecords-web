@@ -109,7 +109,7 @@ footer a{color:var(--crema)}
 a.carta-enlace:hover{transform:translateY(-6px);transition:transform .2s}
 .carta-img{position:relative;display:block;container-type:inline-size;border-radius:6.5%/4.1%;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.8)}
 .carta-img img{width:100%;display:block}
-.carta-img .c-num,.carta-img .c-nom{position:absolute;left:0;right:0;text-align:center;transform:translateY(-50%);font-family:var(--display);font-weight:700;color:#1b2947;letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.carta-img .c-num,.carta-img .c-nom{position:absolute;left:0;right:0;text-align:center;transform:translateY(-50%);font-family:var(--display);font-weight:700;color:#1c1c1c;letter-spacing:.14em;text-transform:uppercase;line-height:1}
 .carta-img .c-num{top:8.4%;font-size:6.2cqw}
 .carta-img .c-nom{top:92.1%;font-size:5.6cqw}
 .letra{border-top:1px solid var(--filete);margin-top:36px;padding-top:28px}
